@@ -15,6 +15,14 @@ public class UsersDaoImpl implements UsersDao{
 	public void insert(UsersDto dto) {
 		session.insert("users.insert", dto);
 	}
+
+	//인자로 전달되는 id 에 해당되는 사용자 정보를 리턴하는 메소드 
+	@Override
+	public UsersDto getData(String id) {
+		UsersDto dto=session.selectOne("users.getData", id);
+		return dto;
+	}
+
 	
 	
 }
