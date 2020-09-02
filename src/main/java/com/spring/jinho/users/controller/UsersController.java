@@ -68,4 +68,12 @@ public class UsersController {
 		session.invalidate();
 		return "redirect:/home.do";
 	}
+	
+	//개인정보 보기 요청 처리
+	@RequestMapping("/users/private/info")
+	public ModelAndView info(HttpServletRequest request,ModelAndView mView) {
+		usersService.getInfo(request.getSession(), mView);
+		mView.setViewName("users/private/info");
+		return mView;
+	}
 }
