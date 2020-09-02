@@ -23,6 +23,10 @@ public class UsersDaoImpl implements UsersDao{
 		return dto;
 	}
 
-	
-	
+	@Override
+	public void delete(String id) {
+		session.delete("users.delete", id);
+	}
+
+
 }
