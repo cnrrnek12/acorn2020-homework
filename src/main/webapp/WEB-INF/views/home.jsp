@@ -19,5 +19,6 @@
 			<a href="${pageContext.request.contextPath }/users/logout.do">로그아웃</a>
 		</c:otherwise>
 	</c:choose>
+	<a href="${pageContext.request.contextPath }/users/private/filter_test.do">필터 테스트</a>
 </body>
 </html>

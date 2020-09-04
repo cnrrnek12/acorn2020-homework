@@ -133,4 +133,9 @@ public class UsersController {
 		mView.setViewName("users/private/pwd_update");
 		return mView;
 	}
+	@RequestMapping("/users/private/filter_test")
+	public String filter_test() {
+		
+		return "users/private/filter_test";
+	}
 }
